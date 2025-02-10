@@ -15,6 +15,7 @@ namespace metrics
 class AggregationConfig
 {
 public:
+  size_t cardinality_limit_ = 2000;
   virtual ~AggregationConfig() = default;
 };
 
