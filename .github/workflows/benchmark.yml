@@ -45,6 +45,8 @@ jobs:
           name: benchmark_results
           path: benchmarks
   store_benchmark:
+    permissions:
+      contents: write
     needs: benchmark
     strategy:
       matrix:
