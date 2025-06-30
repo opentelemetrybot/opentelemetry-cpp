@@ -5,8 +5,7 @@ on:
       - main
 
 permissions:
-  contents: write
-  deployments: write
+  contents: read
 
 jobs:
   benchmark:
@@ -51,6 +50,9 @@ jobs:
         components: ["api", "sdk", "exporters"]
     name: Store benchmark result
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      deployments: write
     steps:
       - name: Harden the runner (Audit all outbound calls)
         uses: step-security/harden-runner@002fdce3c6a235733a90a27c80493a3241e56863 # v2.12.1
