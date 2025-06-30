@@ -46,6 +46,8 @@ jobs:
           path: benchmarks
   store_benchmark:
     needs: benchmark
+    permissions:
+      contents: write
     strategy:
       matrix:
         components: ["api", "sdk", "exporters"]
