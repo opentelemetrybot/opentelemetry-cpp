@@ -46,8 +46,8 @@ jobs:
   store_benchmark:
     needs: benchmark
     permissions:
-      contents: write # required for pushing to gh-pages branch
-      deployments: write # required for GitHub Pages deployment
+      contents: write
+      deployments: write
     strategy:
       matrix:
         components: ["api", "sdk", "exporters"]
