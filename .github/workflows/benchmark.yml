@@ -5,8 +5,7 @@ on:
       - main
 
 permissions:
-  contents: write
-  deployments: write
+  contents: read
 
 jobs:
   benchmark:
@@ -45,6 +44,9 @@ jobs:
           name: benchmark_results
           path: benchmarks
   store_benchmark:
+    permissions:
+      contents: write
+      deployments: write
     needs: benchmark
     strategy:
       matrix:
