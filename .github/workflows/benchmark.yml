@@ -46,8 +46,8 @@ jobs:
   store_benchmark:
     needs: benchmark
     permissions:
-      contents: write
-      deployments: write
+      contents: write # required for storing benchmark results
+      deployments: write # required for deployment operations
     strategy:
       matrix:
         components: ["api", "sdk", "exporters"]
